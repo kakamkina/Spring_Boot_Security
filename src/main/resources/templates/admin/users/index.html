@@ -10,6 +10,8 @@
 <p/>
 <div>
     <nobr>
+        <a th:href="@{/admin/users/{id}/delete/(id=${user.getId()})}">Delete</a> |
+        <a th:href="@{/admin/users/{id}/edit/(id=${user.getId()})}">Edit</a> |
         <a href="/logout">Log Out</a>
     </nobr>
 </div>

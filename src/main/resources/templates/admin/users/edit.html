@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Update user</title>
+</head>
+<body>
+
+<form
+        th:action="@{/admin/users/{id}/edit(id=${user.getId()})}"
+        th:method="POST"
+        th:object="${user}"
+        enctype="multipart/form-data">
+
+    <td th:text="${id}">VALUE</td>
+    <p/>
+    <label for="name">Введите имя:</label>
+    <input type="text" th:field="*{name}" id="name"/>
+    <p/>
+    <label for="age">Введите возраст:</label>
+    <input type="text" th:field="*{age}" id="age"/>
+    <p/>
+    <label for="cityOfBirth">Введите город рождения:</label>
+    <input type="text" th:field="*{cityOfBirth}" id="cityOfBirth">
+    <p/>
+    <label for="username">Введите логин:</label>
+    <input type="text" th:field="*{username}" id="username"/>
+    <p/>
+    <label for="password">Введите пароль:</label>
+    <input type="text" th:field="*{password}" id="password"/>
+    <br/>
+    <p/>
+    <input type="submit" value="Обновить данные"/>
+</form>
+
+</body>
+</html>
